@@ -1,3 +1,9 @@
+@keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 0.3; }
+  100% { opacity: 1; }
+}
+
 body {
   display: flex;
   flex-direction: column;
@@ -56,7 +62,12 @@ body {
   height: 0;
   border-left: 10px solid transparent;
   border-right: 10px solid transparent;
-  border-bottom: 20px solid black; /* 矢印の形 */
+  border-bottom: 20px solid red; /* 矢印の形 */
+}
+
+/* 点滅アニメーション */
+.blinking {
+  animation: blink 0.5s infinite;
 }
 
 #startButton {
