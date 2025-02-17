@@ -8,13 +8,32 @@ body {
   font-family: Arial, sans-serif;
 }
 
+#startButton {
+  padding: 15px 30px;
+  font-size: 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  min-width: 200px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+
+#startButton:hover {
+  background-color: #45a049;
+}
+
 #exerciseContainer {
   margin-bottom: 40px; /* ルーレットとの間にスペースを追加 */
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 200px;
-  height: 200px;
+  width: 220px;
+  height: 220px;
 }
 
 #exerciseImage {
@@ -33,7 +52,7 @@ body {
   align-items: center;
   width: 220px;
   height: 220px;
-  margin-bottom: 20px;
+  margin-top: 10px; /* 画像との間隔を適切に調整 */
 }
 
 #roulette {
@@ -56,25 +75,16 @@ body {
   height: 0;
   border-left: 10px solid transparent;
   border-right: 10px solid transparent;
-  border-bottom: 20px solid black; /* 矢印の形 */
+  border-bottom: 20px solid red;
+  animation: blink 0.5s infinite; /* 点滅アニメーション */
 }
 
-#startButton {
-  padding: 15px 30px;
-  font-size: 20px;
-  background-color: #4CAF50;
-  color: white;
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  min-width: 200px;
-  text-align: center;
+@keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 0.3; }
+  100% { opacity: 1; }
 }
 
-#startButton:hover {
-  background-color: #45a049;
-}
 
 #message {
   margin-top: 20px;
