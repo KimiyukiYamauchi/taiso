@@ -1,3 +1,9 @@
+@keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 0.3; }
+  100% { opacity: 1; }
+}
+
 body {
   display: flex;
   flex-direction: column;
@@ -79,12 +85,16 @@ body {
   animation: blink 0.5s infinite; /* 点滅アニメーション */
 }
 
+/* 点滅アニメーション */
+.blinking {
+  animation: blink 0.5s infinite;
+}
+
 @keyframes blink {
   0% { opacity: 1; }
   50% { opacity: 0.3; }
   100% { opacity: 1; }
 }
-
 
 #message {
   margin-top: 20px;
